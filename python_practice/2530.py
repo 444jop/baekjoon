@@ -15,3 +15,9 @@
 # 첫째 줄에 종료되는 시각의 시, 분, 초을 공백을 사이에 두고 출력한다.
 # (단, 시는 0부터 23까지의 정수이며, 분, 초는 0부터 59까지의 정수이다.
 # 디지털 시계는 23시 59분 59초에서 1초가 지나면 0시 0분 0초가 된다.)
+from datetime import datetime,timedelta
+now = datetime.now()
+print("{0} {1:02} {2:02}".format(now.hour,now.minute,now.second))
+finish_time = int(input())
+before_one_second = now +timedelta(seconds=finish_time)
+print("{0} {1:02} {2:02}".format(before_one_second.hour,before_one_second.minute,before_one_second.second))
